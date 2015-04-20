@@ -11,22 +11,22 @@ Display the starting grid for the user, then begin a cycle of "ticks" that chang
 
 Each tick changes the grid as follows. First, divide the board into "neighborhoods." A neighborhood is always a square of four cells. Given that, on the first tick we would divide a six by four grid as:
 
-+--+--+--+
-|  |  |  |
-|  |  |  |
-+--+--+--+
-|  |  |  |
-|  |  |  |
-+--+--+--+
++--+--+--+                                                                             -
+|  |  |  |                                                                             -
+|  |  |  |                                                                             -
++--+--+--+                                                                             -
+|  |  |  |                                                                             -
+|  |  |  |                                                                             -
++--+--+--+                                                                             -
 
 However, even numbered ticks divide the board with an offset of one. In other words, the neighborhoods will be as follows in the second round:
 
- |  |  |
--+--+--+-
- |  |  | 
- |  |  |
--+--+--+-
- |  |  |
+ |  |  |                                                                              -
+-+--+--+-                                                                             -
+ |  |  |                                                                              -
+ |  |  |                                                                              -
+-+--+--+-                                                                             -
+ |  |  |                                                                              -
 
 Remember that the grid wraps in all directions, so there are still just six neighborhoods here. Later ticks just alternate these two styles of dividing the grid.
 
