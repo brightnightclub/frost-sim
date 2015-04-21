@@ -40,7 +40,6 @@ end
 
 class Tick
   def freezeSwirl
-
   end
 
   def shiftPane
