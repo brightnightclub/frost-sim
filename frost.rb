@@ -7,10 +7,10 @@ class Board
     width = half_width * 2
 
     board = height.times.map do |row|
-      width.times.map{ [' ', '.'].sample }
+      width.times.map{ [' ', '•'].sample }
     end
 
-    board[half_height][half_width] = "*"
+    board[half_height][half_width] = "X"
 
     return new(board)
 
@@ -53,7 +53,6 @@ class Neighborhood
         points = []
       end
     end
-    puts n_sets.inspect
     return n_sets
   end
 
@@ -67,4 +66,8 @@ class Neighborhood
 end
 
 class Cell
+end
+
+if __FILE__ == $0
+  puts Board.generate(20, 20).to_str
 end

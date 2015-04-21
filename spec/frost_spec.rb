@@ -17,12 +17,6 @@ class TestFrost < Minitest::Test
     ]
   end
 
-  def test_board_generation
-    board = Board.generate(2, 3)
-    puts board.to_str
-    puts "_________"
-  end
-
   # def test_make_neighborhood
   #   new_board = Board.new [
   #     "ABCDEF".chars,
@@ -54,17 +48,17 @@ class TestFrost < Minitest::Test
 
     assert_equal expected, neighborhood
   end
-
-  def test_large_neighborhood_points
-    neighborhood = Neighborhood.generate(Board.generate(2,2))
-
-    expected = [
-      Neighborhood.new([0,0], [0,1], [1,0], [1,1]),
-      Neighborhood.new([0,2], [0,3], [1,2], [1,3]),
-      Neighborhood.new([2,0], [2,1], [3,0], [3,1]),
-      Neighborhood.new([2,2], [2,3], [3,2], [3,3])
-    ]
-
-    assert_equal expected, neighborhood
-  end
+  #
+  # def test_large_neighborhood_points
+  #   neighborhood = Neighborhood.generate(Board.generate(2,2))
+  #
+  #   expected = [
+  #     Neighborhood.new([0,0], [0,1], [1,0], [1,1]),
+  #     Neighborhood.new([0,2], [0,3], [1,2], [1,3]),
+  #     Neighborhood.new([2,0], [2,1], [3,0], [3,1]),
+  #     Neighborhood.new([2,2], [2,3], [3,2], [3,3])
+  #   ]
+  #
+  #   assert_equal expected, neighborhood
+  # end
 end
